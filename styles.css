@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #151515;
+    --secondary-color: #EEEEEE;
+    --terceary-color: #C73659;
+    --hover-color: #A91D3A;
+    --primary-font: "Krona One", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+    --title-font-size: 2.25rem;
+    --default-font-size: 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color:var(--primary-color) ;
+    color: var(--secondary-color);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 5rem;
+}
+
+.cabecalho__menu__link {
+    font-size: var(--default-font-size);
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    color: var(--terceary-color); 
+    text-decoration: none;
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 15%;
+    gap: 5rem;
+}
+
+.titulo-destaque {
+    color: var(--terceary-color);
+}
+
+
+.apresentacao__imagem {
+    max-width: 18.75rem;
+    width: 50%;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    /* max-width: 38.4575rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: var(--title-font-size);
+    font-family: var(--primary-font);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: var(--default-font-size);
+    font-family: var(--secondary-font);
+}
+
+.apresentacao__conteudo__texto__nome:hover {
+    color: var(--terceary-color);
+}
+
+.apresentacao__conteudo__links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--primary-font);
+    font-size: var(--default-font-size);
+    font-weight: 400;
+}
+
+.apresentacao__links__icon {
+    width: 2rem;
+    height: 2rem;
+    filter:  invert(32%) sepia(16%) saturate(4899%) hue-rotate(310deg) brightness(94%) contrast(97%);
+}
+
+.apresentacao__links__navegacao {
+    border: 2px solid var(--terceary-color);
+    width: 50%;
+    text-align: center;
+    color: var(--secondary-color);
+    border-radius: 0.5rem;
+    font-size: var(--default-font-size);
+    font-weight:600;
+    padding: 1.3437rem 0px;
+    text-decoration: none;
+    font-family: var(--secondary-font);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--hover-color);
+}
+
+.apresentacao_lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 15%;
+}
+
+.lista_curiosidade {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.3125rem;
+}
+
+.lista_curiosidade__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    border: solid 1px var(--terceary-color);
+    padding: 1.25rem;
+    border-radius: 8px;
+}
+
+.lista_curiosidade__item__texto {
+    font-size: var(--default-font-size);
+    font-weight:400;
+    font-family: var(--primary-font);
+}
+
+.lista_curiosidade__item__texto_destaque {
+    font-size: var(--default-font-size);
+    font-weight:600;
+    font-family: var(--primary-font);
+}
+
+.rodape {
+    background-color: var(--terceary-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1.5rem;
+    font-family: var(--secondary-font);
+}
+
+@media (max-width: 1042px) {
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+
+    .cabecalho {
+        padding: 10% 0% 0% 0%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
